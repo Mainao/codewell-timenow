@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TimeNow</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+	<!-- Include CDN JavaScript -->
+	<script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+	<!-- Specify a custom TailwindCSS configuration -->
+	<script type="tailwind-config">
+	{
+		theme: {
+			extend: {
+				colors: {
+					"sea-green": {
+						"50": "#88feff",
+						"100": "#7ef4ff",
+						"200": "#74eafc",
+						"300": "#6ae0f2",
+						"400": "#60d6e8",
+						"500": "#56ccde",
+						"600": "#4cc2d4",
+						"700": "#42b8ca",
+						"800": "#38aec0",
+						"900": "#2ea4b6"
+					},
+					"turquoise": {
+						"50": "#ffffff",
+						"100": "#f5ffff",
+						"200": "#ebffff",
+						"300": "#e1ffff",
+						"400": "#d7ffff",
+						"500": "#cdf9fd",
+						"600": "#c3eff3",
+						"700": "#b9e5e9",
+						"800": "#afdbdf",
+						"900": "#a5d1d5"
+					}
+				}
+			}
+		}
+	}
+</script>
+<style>
+	body {
+		font-family: 'Inter', sans-serif !important;
+	}
+
+	input:checked ~ .dot {
+		transform: translateX(100%);
+		background-color: #fff;
+	}
+</style>
+</head>
+<body>
+	<!-- Navbar -->
+	<nav>
+		<div class="flex h-30">
+			<div class="flex-1">
+				<div class="max-w-lg mx-auto py-10 px-8 flex space-x-12">
+					<!-- Brand Logo -->
+					<a href="/">
+						<svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M18.009 12.3886C16.238 14.7966 13.61 17.1716 10.65 16.7846C9.849 17.9036 8.955 19.4666 7.962 21.2806L5.666 22.0006C7.609 18.2106 10.203 14.0196 12.986 10.8346C11.781 11.6196 9.801 13.3076 8.078 15.0876C6.524 11.8416 8.163 8.83461 10.536 6.53961C10.469 7.62061 10.949 8.60761 11.308 9.11461C11.246 8.21061 11.352 6.59461 12.012 5.19461C13.335 4.07861 14.504 3.27461 15.841 2.57261C15.624 3.36361 15.808 4.31161 16.063 4.90361C16.179 4.08361 16.666 2.53561 17.23 1.89361C18.897 0.818614 21.365 -0.0423855 24 0.00161449C23.709 1.62461 22.857 4.25961 21.706 5.89461C20.777 6.49161 19.549 6.84061 18.569 7.00961C19.38 7.23761 20.288 7.30262 21.078 7.24462C20.503 8.45162 19.921 9.55561 19.039 10.9106C17.823 11.5896 16.269 11.8886 15.207 11.9456C15.95 12.3346 17.304 12.5626 18.009 12.3886ZM4 21.0006H0V22.0006H4V21.0006Z" fill="#E8704A"/>
+						</svg>
+					</a>
+					<!-- Links -->
+					<div class="hidden md:block text-lg flex space-x-6">
+						<a href="#0" class="text-gray-500">Features</a>
+						<a href="pricing-plan.html" class="text-gray-500">Pricing</a>
+					</div>
+				</div>
+			</div>
+			<div class="hidden md:block flex-1">
+				<div class="max-w-lg mx-auto py-10 px-8 flex justify-end">
+					<button class="text-lg text-md font-semibold px-5 py-4 bg-indigo-800 rounded-md text-white">Start Scheduling</button>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- End Navbar -->
+
+	<section class="md:max-w-4xl md:mx-auto pt-10 px-4 md:px-0">
+		<p class="text-6xl font-bold text-center">Flexible Plans for Everyone.</p>
+		<p class="text-gray-600 text-center mt-4">
+			Our plans are made for everyone. Whether you are just starting out on social media, or have been there
+			for a long time, we have a plan that's right for you.
+		</p>
+		<div class="flex justify-center space-x-4 mt-4">
+			<p class="text-gray-600 font-bold text-center">Billed Monthly</p>
+
+			<!-- <div class="flex items-center justify-center w-full mb-12"> -->
+  
+				<label for="toggleB" class="flex items-center cursor-pointer">
+					<!-- toggle -->
+					<div class="relative">
+						<!-- input -->
+						<input type="checkbox" id="toggleB" class="sr-only">
+						<!-- line -->
+						<div class="block bg-blue-600 w-14 h-8 rounded-full"></div>
+						<!-- dot -->
+						<div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
+					</div>
+				
+				</label>
+			
+			<!-- </div> -->
+
+			<p class="text-gray-600 text-center">Billed Yearly</p>
+		</div>
+		
+	
+	</section>
+
+	<section class="container mx-auto p-12">
+		<div class="grid lg:grid-cols-3 gap-10 md:grid-cols-2">
+			<div class="flex-1 p-8 border border-gray-200 rounded-md">
+				<p>
+					<span class="text-4xl font-bold">$4</span>
+					<span class="text-gray-300 text-xl">/mo</span>
+				</p>
+				<p class="text-gray-500 text-lg mt-4">Perfect plan if you are just starting out.</p>
+				<div class="w-full border-b-2 border-gray-300 my-5"></div>
+				<div class="flex flex-col gap-y-4 text-gray-500 text-lg">
+					<div class="flex space-x-4">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.75 17.292L6.25 12.928L8.107 11.07L10.75 13.576L16.393 7.792L18.25 9.649L10.75 17.292Z" fill="#46C487"/>
+						</svg>
+						<p>LinkedIn Integration</p>
+					</div>
+					<div class="flex space-x-4">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.75 17.292L6.25 12.928L8.107 11.07L10.75 13.576L16.393 7.792L18.25 9.649L10.75 17.292Z" fill="#46C487"/>
+						</svg>
+						<p>Twitter Integration</p>
+					</div>
+					<div class="flex space-x-4">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.75 17.292L6.25 12.928L8.107 11.07L10.75 13.576L16.393 7.792L18.25 9.649L10.75 17.292Z" fill="#46C487"/>
+						</svg>
+						<p>Real Time Analysis</p>
+					</div>
+				</div>
+				<button class="w-full py-4 bg-indigo-900 text-white font-bold rounded-md mt-8">Subscribe Now</button>
+			</div>
+
+			<div class="flex-1 p-8 border border-gray-200 rounded-md">
+				<p>
+					<span class="text-4xl font-bold">$12</span>
+					<span class="text-gray-300 text-xl">/mo</span>
+				</p>
+				<p class="text-gray-500 text-lg mt-4">Perfect plan if you are aheavy user of social media.</p>
+				<div class="w-full border-b-2 border-gray-300 my-5"></div>
+				<div class="flex flex-col gap-y-4 text-gray-500 text-lg">
+					<div class="flex space-x-4">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.75 17.292L6.25 12.928L8.107 11.07L10.75 13.576L16.393 7.792L18.25 9.649L10.75 17.292Z" fill="#46C487"/>
+						</svg>
+						<p>LinkedIn Integration</p>
+					</div>
+					<div class="flex space-x-4">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.75 17.292L6.25 12.928L8.107 11.07L10.75 13.576L16.393 7.792L18.25 9.649L10.75 17.292Z" fill="#46C487"/>
+						</svg>
+						<p>Twitter Integration</p>
+					</div>
+					<div class="flex space-x-4">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.75 17.292L6.25 12.928L8.107 11.07L10.75 13.576L16.393 7.792L18.25 9.649L10.75 17.292Z" fill="#46C487"/>
+						</svg>
+						<p>Instagram Integration</p>
+					</div>
+					<div class="flex space-x-4">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.75 17.292L6.25 12.928L8.107 11.07L10.75 13.576L16.393 7.792L18.25 9.649L10.75 17.292Z" fill="#46C487"/>
+						</svg>
+						<p>Real Time Analysis</p>
+					</div>
+				</div>
+				<button class="w-full py-4 bg-indigo-900 text-white font-bold rounded-md mt-8">Subscribe Now</button>
+			</div>
+
+			<div class="flex-1 p-8 border border-gray-200 rounded-md lg:col-span-1 md:col-span-2 ">
+				<p>
+					<span class="text-4xl font-bold">$7</span>
+					<span class="text-gray-300 text-xl">/mo</span>
+				</p>
+				<p class="text-gray-500 text-lg mt-4">Perfect plan if you are just starting out.</p>
+				<div class="w-full border-b-2 border-gray-300 my-5"></div>
+
+				<div class="flex flex-col gap-y-4 text-gray-500 text-lg">
+					<div class="flex space-x-4">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.75 17.292L6.25 12.928L8.107 11.07L10.75 13.576L16.393 7.792L18.25 9.649L10.75 17.292Z" fill="#46C487"/>
+						</svg>
+						<p>LinkedIn Integration</p>
+					</div>
+					<div class="flex space-x-4">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.75 17.292L6.25 12.928L8.107 11.07L10.75 13.576L16.393 7.792L18.25 9.649L10.75 17.292Z" fill="#46C487"/>
+						</svg>
+						<p>Twitter Integration</p>
+					</div>
+				</div>
+				<button class="w-full py-4 bg-indigo-900 text-white font-bold rounded-md mt-8">Subscribe Now</button>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container mx-auto px-12 pt-20 pb-16">
+			<!-- Brand Logo -->
+			<svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M18.009 12.3886C16.238 14.7966 13.61 17.1716 10.65 16.7846C9.849 17.9036 8.955 19.4666 7.962 21.2806L5.666 22.0006C7.609 18.2106 10.203 14.0196 12.986 10.8346C11.781 11.6196 9.801 13.3076 8.078 15.0876C6.524 11.8416 8.163 8.83461 10.536 6.53961C10.469 7.62061 10.949 8.60761 11.308 9.11461C11.246 8.21061 11.352 6.59461 12.012 5.19461C13.335 4.07861 14.504 3.27461 15.841 2.57261C15.624 3.36361 15.808 4.31161 16.063 4.90361C16.179 4.08361 16.666 2.53561 17.23 1.89361C18.897 0.818614 21.365 -0.0423855 24 0.00161449C23.709 1.62461 22.857 4.25961 21.706 5.89461C20.777 6.49161 19.549 6.84061 18.569 7.00961C19.38 7.23761 20.288 7.30262 21.078 7.24462C20.503 8.45162 19.921 9.55561 19.039 10.9106C17.823 11.5896 16.269 11.8886 15.207 11.9456C15.95 12.3346 17.304 12.5626 18.009 12.3886ZM4 21.0006H0V22.0006H4V21.0006Z" fill="#E8704A"/>
+			</svg>
+			<!-- <div class="flex flex-col md:flex-row gap-y-8 justify-between mt-5">
+				<div class="flex flex-wrap gap-y-8 space-x-32 text-lg"> -->
+			<div class="grid grid-cols-2 md:grid-cols-6 gap-y-4 mt-4">
+				<ul class="leading-loose">
+					<li class="font-bold">Product</li>
+					<li><a href="#0" class="text-gray-500">Homepage</a></li>
+					<li><a href="#0" class="text-gray-500">Pricing</a></li>
+					<li><a href="#0" class="text-gray-500">Features</a></li>
+				</ul>
+				
+				<ul class="leading-loose">
+					<li class="font-bold">Help</li>
+					<li><a href="#0" class="text-gray-500">Live Chat</a></li>
+					<li><a href="#0" class="text-gray-500">Send Email</a></li>
+					<li><a href="#0" class="text-gray-500">FAQ</a></li>
+				</ul>
+			
+				<ul class="leading-loose">
+					<li class="font-bold">Product</li>
+					<li><a href="#0" class="text-gray-500">About</a></li>
+					<li><a href="#0" class="text-gray-500">Customers</a></li>
+					<li><a href="#0" class="text-gray-500">Blog</a></li>
+				</ul>
+
+				<div class="col-span-2 md:col-span-3 md:col-start-5">
+					<p class="font-bold">Try TweetNow</p>
+					<div class="border border-gray-300 rounded-md flex justify-between p-2 mt-2">
+						<input type="text" class="appearance-none border-none w-auto" placeholder="Email Address">
+						<button class="px-4 py-3 text-md bg-indigo-900 text-white rounded-md w-48">Start Scheduling</button>
+					</div>
+				</div>
+			</div>
+					
+
+		</div>
+			
+		
+	</footer>
+  
+</body>
+</html>
